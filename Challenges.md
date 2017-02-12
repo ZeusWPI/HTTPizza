@@ -17,3 +17,11 @@ Customer => Team3
 Opdracht => 4
 ```
 Thematisch zullen jullie stap voor stap een systeem opstellen om automatisch pizza naar wens te bestellen bij onze fictieve pizzeria `Hot n' Tasty Tomato Palace`. Harold, de uitbater heeft zijn online bestel platform jammer genoeg outsourced naar India, en snapt helemaal niet hoe de code werkt, dus je kan hem niets vragen. De opracht is dus stapsgewijs zijn systeem te verkennen, om uiteindelijk bij een full-featured pizza order bot tercht te komen.
+
+## Challenge 1
+To get things started, we need to start things. De beste plaats daarvoor is natuurlijk de welkom-pagina!
+### Opdracht
+Stuur een simpele, PIZZA request naar `/welkom`. Vergeet je team naam en het challenge nummer niet bij te sluiten, voor de rest mag de request leeg zijn.
+
+### Rewards: Part of the crew
+Je kan met je net gekregen code aan de toog een Zeus sticker gaan afhalen voor elk team lid.
