@@ -5,11 +5,7 @@ Als een opdracht correct uitgevoerd wordt zal een code meegeleverd worden in de 
 
 De code is uniek per team en opdracht, dus het heeft geen zin om de codes van andere teams te gebruiken.
 
-Er wordt verwacht dat jullie de team naam en opprachtnummer meegeven als message-headers zoals in de volgende specificatie:
-```
-Customer => team-naam
-Challenge => opdracht-id
-```
+Er wordt verwacht dat jullie de team naam en opprachtnummer meegeven als message-headers zoals (bvb.) in onderstaand voorbeeld.
 
 Voorbeeld
 ```
@@ -20,8 +16,19 @@ Thematisch zullen jullie stap voor stap een systeem opstellen om automatisch piz
 
 ## Challenge 1
 To get things started, we need to start things. De beste plaats daarvoor is natuurlijk de welkom-pagina!
+
 ### Opdracht
-Stuur een simpele, PIZZA request naar `/welkom`. Vergeet je team naam en het challenge nummer niet bij te sluiten, voor de rest mag de request leeg zijn.
+Stuur een simpele PIZZA request naar `/welkom`. Vergeet je team naam en het challenge nummer niet bij te sluiten, voor de rest mag de request leeg zijn. De server stuurt een response terug met daarin je code (lees die voorlopig manueel).
 
 ### Rewards: Part of the crew
 Je kan met je net gekregen code aan de toog een Zeus sticker gaan afhalen voor elk team lid.
+
+## Challenge 2
+Je pizza-bots zal snel moeten kunnen omgaan met server-responses, onder andere om time-outs te vermijden.
+
+### Opdracht
+Stuur opnieuw een simpele PIZZA request, maar nu naar /login, je zal een response terug krijgen met daarin de `Token => [field-value]` message-header, waarbij de field-value een token is die je kan gebruiken om in te loggen. Deze token expired echter na 1 seconde, stuur dus rap een ORDER, met `application/x-www-form-urlencoded` as `Pizza-Type`, en in de body `Code=[token]`. De server response dan zal opnieuw een code bevatten.
+
+### Rewards: 
+Je kan per teamlid, een bonnetje gaan halen aan de toog, waarmee je (eenmalig) drank kan gaan halen aan 50 cent korting.
+
