@@ -32,3 +32,12 @@ Stuur opnieuw een simpele PIZZA request, maar nu naar /login, je zal een respons
 ### Rewards: 
 Je kan per teamlid, een bonnetje gaan halen aan de toog, waarmee je (eenmalig) drank kan gaan halen aan 50 cent korting.
 
+## Challenge 4
+Om sneller pizza informatie te kunnen geven, zal Harold sommige requests zippen met gzip, zorg er dus voor dat je bot daar mee kan omgaan.
+
+### Opdracht
+Stuur een simpele PIZZA request naar /fastlane, je zal dan een response terug krijgen waarbij de header `Content-Encoding` soms op 
+`gzip` staat, maar zeker niet altijd, pas als `Content-Encoding` effectief op `gzip` staat, zal er een code inzitten (1 kans op 50).
+
+### Rewards:
+Je krijgt een kwart pizza naar keuze gratis! (eenmalig)
