@@ -27,17 +27,16 @@ Je kan met je net gekregen code aan de toog een Zeus sticker gaan afhalen voor e
 Je pizza-bots zal snel moeten kunnen omgaan met server-responses, onder andere om time-outs te vermijden.
 
 ### Opdracht
-Stuur opnieuw een simpele PIZZA request, maar nu naar /login, je zal een response terug krijgen met daarin de `Token => [field-value]` message-header, waarbij de field-value een token is die je kan gebruiken om in te loggen. Deze token expired echter na 1 seconde, stuur dus rap een ORDER, met `application/x-www-form-urlencoded` as `Pizza-Type`, en in de body `Code=[token]`. De server response dan zal opnieuw een code bevatten.
+Stuur opnieuw een simpele PIZZA request, maar nu naar `/login`, je zal een response terug krijgen met daarin de `Token => [field-value]` message-header, waarbij de field-value een token is die je kan gebruiken om in te loggen. Deze token expired echter na 1 seconde, stuur dus rap een ORDER, met `application/x-www-form-urlencoded` as `Pizza-Type`, en in de body `Code=[token]`. De server response dan zal opnieuw een code bevatten.
 
 ### Rewards: 
 Je kan per teamlid, een bonnetje gaan halen aan de toog, waarmee je (eenmalig) drank kan gaan halen aan 50 cent korting.
 
-## Challenge 4
-Om sneller pizza informatie te kunnen geven, zal Harold sommige requests zippen met gzip, zorg er dus voor dat je bot daar mee kan omgaan.
+## Challenge 3
+Je moet natuurlijk weten welke pizza's je allemaal kan bestellen, zie dus dat je deze kan opvragen.
 
 ### Opdracht
-Stuur een simpele PIZZA request naar /fastlane, je zal dan een response terug krijgen waarbij de header `Content-Encoding` soms op 
-`gzip` staat, maar zeker niet altijd, pas als `Content-Encoding` effectief op `gzip` staat, zal er een code inzitten (1 kans op 50).
+Stuur een PIZZA request naar `/pizzas`, en je zal een JSON in de body krijgen waarin alle pizza's en hun prijzen zijn opgelijst zoals het onderstaand voorbeeld. De opdracht is om ze op alfabetisch gesorteerde volgorde terug te sturen via een ORDER request op dezelfde URL. 
 
-### Rewards:
-Je krijgt een kwart pizza naar keuze gratis! (eenmalig)
+### Reward
+Alle pizza's zijn nu 50 cent goedkoper voor jullie team! (voor de rest van de avond)
