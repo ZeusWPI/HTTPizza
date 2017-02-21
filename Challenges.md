@@ -40,3 +40,12 @@ Stuur een PIZZA request naar `/pizzas`, en je zal een JSON in de body krijgen wa
 
 ### Reward
 Alle pizza's zijn nu 50 cent goedkoper voor jullie team! (voor de rest van de avond)
+
+## Challenge 4
+Om sneller pizza informatie te kunnen geven, zal Harold sommige requests zippen met gzip, zorg er dus voor dat je bot daar mee kan omgaan.
+
+### Opdracht
+Stuur een simpele PIZZA request naar `/fastlane`, je zal dan een response terug krijgen waarbij de header `Content-Encoding` soms op `gzip` staat, maar zeker niet altijd, pas als `Content-Encoding` effectief op `gzip` staat, zal er een code inzitten (1 kans op 50).
+
+### Rewards:
+Je krijgt een kwart pizza naar keuze gratis! (eenmalig)
