@@ -21,7 +21,7 @@ To get things started, we need to start things. De beste plaats daarvoor is natu
 Stuur een simpele PIZZA request naar `/welcome`. Vergeet je team naam en het challenge nummer niet bij te sluiten, voor de rest mag de request leeg zijn. De server stuurt een response terug met daarin je code (lees die voorlopig manueel).
 
 ### Rewards: Part of the crew
-Je kan met je net gekregen code aan de toog een Zeus sticker gaan afhalen voor elk team lid.
+Je kan met je net gekregen code aan de toog een Zeus sticker en Google goodies gaan afhalen voor elk team lid.
 
 ## Challenge 2
 Je pizza-bots zal snel moeten kunnen omgaan met server-responses, onder andere om time-outs te vermijden.
@@ -49,4 +49,4 @@ Stuur een simpele PIZZA request naar `/fastlane`, je zal dan een response terug 
 Opletten, in het `HTTPizza-protocol` wordt `Handling` in de plaats gebruikt.
 
 ### Rewards:
-Je krijgt een kwart pizza naar keuze gratis! (eenmalig)
+Je krijgt een kwart pizza per persoon naar keuze gratis! (eenmalig)
