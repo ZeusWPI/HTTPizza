@@ -27,7 +27,7 @@ Je kan met je net gekregen code aan de toog een Zeus sticker en Google goodies g
 Je pizza-bots zal snel moeten kunnen omgaan met server-responses, onder andere om time-outs te vermijden.
 
 ### Opdracht
-Stuur opnieuw een simpele PIZZA request, maar nu naar `pizza!?!be:ugent:zeus:pi/login`, je zal een response terug krijgen met daarin de `Token => [field-value]` message-header, waarbij de field-value een token is die je kan gebruiken om in te loggen. Deze token expired echter na 1 seconde, stuur dus rap een ORDER, met `application/x-www-form-urlencoded` as `Pizza-Type`, en in de body `Code=[token]`. De server response dan zal opnieuw een code bevatten.
+Stuur opnieuw een simpele PIZZA request, maar nu naar `pizza!?!be:ugent:zeus:pi/login`, je zal een response terug krijgen met daarin de `Token => [field-value]` message-header, waarbij de field-value een token is die je kan gebruiken om in te loggen. Deze token expiret echter na 1 seconde, stuur dus rap een ORDER, met `application/x-www-form-urlencoded` as `Pizza-Type`, en in de body `Code=[token]`. De server response dan zal opnieuw een code bevatten.
 
 ### Rewards: 
 Je kan per teamlid, een bonnetje gaan halen aan de toog, waarmee je (eenmalig) drank kan gaan halen aan 50 cent korting.
