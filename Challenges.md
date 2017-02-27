@@ -18,7 +18,7 @@ Thematisch zullen jullie stap voor stap een systeem opstellen om automatisch piz
 To get things started, we need to start things. De beste plaats daarvoor is natuurlijk de welkom-pagina!
 
 ### Opdracht
-Stuur een simpele PIZZA request naar `/welkom`. Vergeet je team naam en het challenge nummer niet bij te sluiten, voor de rest mag de request leeg zijn. De server stuurt een response terug met daarin je code (lees die voorlopig manueel).
+Stuur een simpele PIZZA request naar `/welcome`. Vergeet je team naam en het challenge nummer niet bij te sluiten, voor de rest mag de request leeg zijn. De server stuurt een response terug met daarin je code (lees die voorlopig manueel).
 
 ### Rewards: Part of the crew
 Je kan met je net gekregen code aan de toog een Zeus sticker gaan afhalen voor elk team lid.
