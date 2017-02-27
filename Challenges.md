@@ -33,10 +33,10 @@ Stuur opnieuw een simpele PIZZA request, maar nu naar `/login`, je zal een respo
 Je kan per teamlid, een bonnetje gaan halen aan de toog, waarmee je (eenmalig) drank kan gaan halen aan 50 cent korting.
 
 ## Challenge 3
-Je moet natuurlijk weten welke pizza's je allemaal kan bestellen, zie dus dat je deze kan opvragen.
+Pizzas zijn ook configureerbaar. Pizza-opties kan je doorgeven als bijkomende velden in de header van een request. Voor deze opgave moet je aangepaste pizzas kunnen bestellen bij `Hot n' Tasty Tomato Palace`.
 
 ### Opdracht
-Stuur een PIZZA request naar `/pizzas`, en je zal een JSON in de body krijgen waarin alle pizza's en hun prijzen zijn opgelijst zoals het onderstaand voorbeeld. De opdracht is om ze op alfabetisch gesorteerde volgorde terug te sturen via een ORDER request op dezelfde URL. 
+Stuur eerst een PIZZA request naar `/pizzas` om pizzadetails op te vragen. Je vindt deze opties terug in de body van het antwoord van de server, hetzij in JSON, hetzij url-encoded. De encodering wordt aangegeven door het `Handling` veld in de header: `application/json` voor JSON en `application/x-www-form-urlencoded` voor url-encoding. Vervolgens dien je deze pizza te bestellen met een ORDER request naar `/pizzas` te sturen. Als je bestelling juist is doorgegeven, zal je als antwoord een nieuwe opgave krijgen op dezelfde manier. Dit blijf je doen tot je een rewardcode (of foutmelding) krijgt. Deze kan je herkennen aan de `plain/text` handling.
 
 ### Reward
 Alle pizza's zijn nu 50 cent goedkoper voor jullie team! (voor de rest van de avond)
