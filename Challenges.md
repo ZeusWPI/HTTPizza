@@ -10,7 +10,7 @@ Er wordt verwacht dat jullie de team naam en opprachtnummer meegeven als message
 Voorbeeld
 ```
 Customer => Team3
-Opdracht => 4
+Challenge => 4
 ```
 Thematisch zullen jullie stap voor stap een systeem opstellen om automatisch pizza naar wens te bestellen bij onze fictieve pizzeria `Hot n' Tasty Tomato Palace`. Harold, de uitbater heeft zijn online bestel platform jammer genoeg outsourced naar India, en snapt helemaal niet hoe de code werkt, dus je kan hem niets vragen. De opracht is dus stapsgewijs zijn systeem te verkennen, om uiteindelijk bij een full-featured pizza order bot tercht te komen.
 
