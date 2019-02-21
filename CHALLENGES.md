@@ -27,7 +27,7 @@ In this special pizza place, the menu is different from usual menus: instead of 
 Of course, it's not possible to just throw some ingredients together and get a good pizza: only the chef knows what ingredients form a valid pizza.
 Unfortunately, you can't talk directly to the chef, but you can talk to the chef via your waiter.
 
-To check if a pizza exists, make a PIZZA request to `/pizza` containing the `I-Want` header. The value of this header is a comma-separated list of toppings and sauces.
+To check if a pizza exists, make a ORDER request to `/pizza` containing the `I-Want` header. The value of this header is a comma-separated list of toppings and sauces.
 
 For example, if you got this menu:
 
