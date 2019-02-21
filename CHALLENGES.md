@@ -56,6 +56,22 @@ Please eat your entire pizza before continuing.
 
 Reward: every teammember gets one **free** slice of pizza
 
+
+## 6. Time to pay!
+
+You thought all that pizza was free? Just cause we said so? WRONG!
+Pay up by sending a PIZZA request to /pay. But hold up! The server will reject your request! Since the invoice contains a MASSIVE amount of IMPORTANT information, the server wants to gzip it. But you have to tell the server that you are ready to receive a gzipped file by including the correct header.
+
+Once you have received the invoice, you need to parse the zipped file to find your payment token. 
+The token is hidden somewhere in the wall of text with the format `$$PIZZATOKEN => ${token}$$` (you need whats inside the curly braces).
+
+Then, send an ORDER request to /pay with that token included in a `Token` header. 
+
+EXTRA CHALLENGE: do the above as fast as possible! Once you have succesfully completed the ORDER request you will receive a score, which is the amount of milliseconds you took to pay. Try to get it as low as possible!
+
+
+
+
 # Extra challenges
 
 ## I. Start your own pizza place
