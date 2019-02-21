@@ -1,4 +1,4 @@
-# The HTTPizza/1.1 protocol
+# The HTTPizza/2.0 protocol
 
 The HTTPizza protocol is very similar to [RFC2616](https://tools.ietf.org/html/rfc2616),
 with the exception of the quirks listed below
@@ -27,7 +27,7 @@ could be represented in HTTPizza as `pizza!?!be:ugent:www/foo/bar?q=`.
 HTTP-Version   = "HTTPizza" "/" 1*DIGIT "." 1*DIGIT
 ```
 
-The current protocol version is `HTTPizza/1.1`.
+The current protocol version is `HTTPizza/2.0`.
 
 ## Header
 Message headers are altered as follows:
@@ -52,3 +52,10 @@ Header names are altered as follows:
 - `I-Want`      replaces `Accept`
 - `Pizza-Place` replaces `Host`
 - `Handling`    replaces `Transfer-Encoding`, and its value `sliced` replaces `chunked`
+
+Note that headers should (for now) be lowercased before sending them.
+
+## CRLF
+
+RFC2616 specifies that CRLF should be used as the end-of-line marker. In HTTPizza,
+you can also use linefeeds instead of CRLF.
