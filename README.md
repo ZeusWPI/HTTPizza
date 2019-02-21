@@ -59,3 +59,8 @@ Note that headers should (for now) be lowercased before sending them.
 
 RFC2616 specifies that CRLF should be used as the end-of-line marker. In HTTPizza,
 you can also use linefeeds instead of CRLF.
+
+## Status codes
+
+HTTPizza servers can, just like HTTP, return status codes. There's a list of status codes
+and what they mean in [this list](status_codes.txt),
