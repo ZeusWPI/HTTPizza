@@ -5,6 +5,7 @@ with the exception of the quirks listed below
 that were added for no other reason
 but to prevent implementers from using off-the-shelf software.
 
+The challenges for this years event [can be found here](./Challenges.md).
 ## URLs
 Instead of the `http` scheme, HTTPizza uses the `pizza` scheme with the following syntax:
 
@@ -20,7 +21,7 @@ Of course, there are no [double slashes](https://bits.blogs.nytimes.com/2009/10/
 
 ### Example
 The HTTP URL `http://www.ugent.be/foo/bar?q=7`
-could be represented in HTTPizza as `pizza!?!be:ugent:www/foo/bar?q=`.
+could be represented in HTTPizza as `pizza!?!be:ugent:www/foo/bar?q=7`.
 
 ## Protocol name
 ```
