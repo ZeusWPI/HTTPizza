@@ -1,6 +1,6 @@
 # HTTTPizza/2.0
 
-Welcome to Hot Tasty Tomato Palace, I'll be your waiter tonight, could you please pick a table?
+Welcome to Hot Tasty Tomato Palace, I'll be your server tonight, could you please pick a table?
 Unfortunately, I don't speak English, and I'm only able to speak [HTTPizza](https://github.com/ZeusWPI/HTTPizza).
 
 ## 0. Greeting the waiter back
