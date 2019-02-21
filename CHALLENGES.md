@@ -7,19 +7,19 @@ Unfortunately, I don't speak English, and I'm only able to speak [HTTPizza](http
 
 Please be a polite human and make a PIZZA request to `/welcome`.
 
-Reward: warm fuzzy feeling
+Reward: you can now order drinks at reduced prices
 
 ## 1. Picking a table
 
 To get a table, you'll need to login first. To do that, you need to make an ORDER request to `/login` with a `Name` header containing your teamname. The waiter will then give you a table number where you can sit down. This number will be in the `table` header in the response. In all further HTTPizza request, you'll need to add your tablenumber so the server doesn't get confused.
 
-Reward: you can choose one sticker from the stickertable
+Reward:  every teammember gets one **free** slice of pizza AND you can choose one sticker from the stickertable
 
 ## 2. What's on the menu?
 
 You've just sat down on your assigned table, and want to check what pizza's are on the menu. To check the menu, make a PIZZA request to `/menu`. Don't forget to add a `Table` header with your table number you got from logging in!
 
-Reward: you can now order drinks at reduced prices
+Reward:  every teammember gets one **free** slice of pizza
 
 ## 3. Picky eater
 
@@ -46,7 +46,7 @@ Each table has an oven in which you can bake a single pizza. After finding which
 
 After that time has passed, make a PIZZA request to `/pickup`. This will return your pizza ID.
 
-Reward: every teammember gets two **free** pizza slices!
+Reward:  every teammember gets one **free** slice of pizza
 
 ## 5. Om nom nom
 
@@ -54,8 +54,7 @@ My favorite part! We can now eat the pizza we just got from the oven by making a
 
 Please eat your entire pizza before continuing.
 
-Reward: every successful EAT request for a slice can be redeemed for an actual slice of pizza!
-
+Reward: every teammember gets one **free** slice of pizza
 
 # Extra challenges
 
