@@ -5,7 +5,7 @@ with the exception of the quirks listed below
 that were added for no other reason
 but to prevent implementers from using off-the-shelf software.
 
-The challenges for this years event [can be found here](./Challenges.md).
+The challenges for this years event [can be found here](./challenges2.md).
 ## URLs
 Instead of the `http` scheme, HTTPizza uses the `pizza` scheme with the following syntax:
 
