@@ -1,52 +1,45 @@
-# Opdrachten
+# HTTTPizza/2.0
 
-Hieronder zijn een reeks opdrachten gegeven die jullie kunnen completen voor de rewards die erbij gespecifieerd zijn, het is aan te raden om de opdrachten in volgorde op te lossen. [TBD] De rewards zullen namelijk ook incrementeel toegekend worden, dus je bent niets met de code van opdracht 5, als je 4 nog niet hebt opgelost.
-Als een opdracht correct uitgevoerd wordt zal een code meegeleverd worden in de response, die jullie kunnen gebruiken om aan de toog van jullie rewards gebruik te maken.
+Welcome to Hot Tasty Tomato Palace, I'll be your server tonight, could you please pick a table?
+Unfortunately, I don't speak English, and I'm only able to speak [HTTPizza](https://github.com/ZeusWPI/HTTPizza).
 
-De code is uniek per team en opdracht, dus het heeft geen zin om de codes van andere teams te gebruiken.
+## 0. Greeting the waiter back
 
-Er wordt verwacht dat jullie de team naam en opprachtnummer meegeven als message-headers zoals (bvb.) in onderstaand voorbeeld.
+Please be a polite human and make a PIZZA request to `/welcome`.
 
-Voorbeeld
+## 1. Picking a table
+
+To get a table, you'll need to login first. To do that, you need to make an ORDER request to `/login` with a `Name` header containing your name. The waiter will then give you a table number where you can sit down. This number will be in the `table` header in the response. In all further HTTPizza request, you'll need to add your tablenumber so the server doesn't get confused.
+
+## 2. What's on the menu?
+
+You've just sat down on your assigned table, and want to check what pizza's are on the menu. To check the menu, make a PIZZA request to `/menu`. Don't forget to add a `Table` header with your table number you got from logging in!
+
+## 3. Picky eater
+
+In this special pizza place, the menu is different from usual menus: instead of a list of possible pizzas, there's a list of ingredients.
+Of course, it's not possible to just throw some ingredients together and get a good pizza: only the chef knows what ingredients form a valid pizza.
+Unfortunately, you can't talk directly to the chef, but you can talk to the chef via your waiter.
+
+To check if a pizza exists, make a PIZZA request to `/pizza` containing the `I-Want` header. The value of this header is a comma-separated list of toppings and sauces.
+
+For example, if you got this menu:
+
 ```
-Customer => Team3
-Challenge => 4
+{"topping":["parmesan", "onions"],"sauce":["nutella"]
 ```
-Thematisch zullen jullie stap voor stap een systeem opstellen om automatisch pizza naar wens te bestellen bij onze fictieve pizzeria `Hot n' Tasty Tomato Palace`. Harold, de uitbater heeft zijn online bestel platform jammer genoeg outsourced naar India, en snapt helemaal niet hoe de code werkt, dus je kan hem niets vragen. De opracht is dus stapsgewijs zijn systeem te verkennen, om uiteindelijk bij een full-featured pizza order bot tercht te komen.
+you could check if a really weird pizza with nutella and parmesan exists by putting `topping/parmesan, sauce/nutella` in the `I-Want` header.
 
-## Challenge 1
-To get things started, we need to start things. De beste plaats daarvoor is natuurlijk de welkom-pagina!
+Try to bruteforce all possible pizzas to see what pizzas exist. The order of toppings/sauces doesn't matter, nor does how many times you include the same topping/sauce.
 
-### Opdracht
-Stuur een simpele PIZZA request naar `pizza!?!be:ugent:zeus:pi/welcome`. Vergeet je team naam en het challenge nummer niet bij te sluiten, voor de rest mag de request leeg zijn. De server stuurt een response terug met daarin je code (lees die voorlopig manueel).
+## 4. Time to order!
 
-### Rewards: Part of the crew
-Je kan met je net gekregen code aan de toog een Zeus sticker en Google goodies gaan afhalen voor elk team lid.
+Each table has an oven in which you can bake a single pizza. After finding which pizza you want to order in #3, you can now order the pizza you got by making an ORDER request to `/order`. This request needs to have the `Pizza-Type` header set to the name of the pizza you got in #3. The response will have an `Oven-Time` header containing a number. This number indicates the number of seconds the pizza needs to be baked in the oven.
 
-## Challenge 2
-Je pizza-bots zal snel moeten kunnen omgaan met server-responses, onder andere om time-outs te vermijden.
+After that time has passed, make a PIZZA request to `/pickup`. This will return your pizza ID.
 
-### Opdracht
-Stuur opnieuw een simpele PIZZA request, maar nu naar `pizza!?!be:ugent:zeus:pi/login`, je zal een response terug krijgen met daarin de `Token => [field-value]` message-header, waarbij de field-value een token is die je kan gebruiken om in te loggen. Deze token expiret echter na 1 seconde, stuur dus rap een ORDER, met `application/x-www-form-urlencoded` as `Pizza-Type`, en in de body `Code=[token]`. De server response dan zal opnieuw een code bevatten.
+## 5. Om nom nom
 
-### Rewards: 
-Je kan per teamlid, een bonnetje gaan halen aan de toog, waarmee je (eenmalig) drank kan gaan halen aan 50 cent korting.
+My favorite part! We can now eat the pizza we just got from the oven by making an EAT request to `/pizza/<your-pizza-id-here>/`. This will redirect you to a pizza slice, which you then have to EAT. Every request to your pizza will return a new slice, until there's no more pizza left.
 
-## Challenge 3
-Pizzas zijn ook configureerbaar. Pizza-opties kan je doorgeven als bijkomende velden in de header van een request. Voor deze opgave moet je aangepaste pizzas kunnen bestellen bij `Hot n' Tasty Tomato Palace`.
-
-### Opdracht
-Stuur eerst een PIZZA request naar `/pizzas` om pizzadetails op te vragen. Je vindt deze opties terug in de body van het antwoord van de server, hetzij in JSON, hetzij url-encoded. De encodering wordt aangegeven door het `Pizza-Type` veld in de header: `application/json` voor JSON en `application/x-www-form-urlencoded` voor url-encoding. Vervolgens dien je deze pizza te bestellen met een ORDER request naar `/pizzas`, **met elke entry uit de respons in de header geplaatst**. Als je bestelling juist is doorgegeven, zal je als antwoord een nieuwe opgave krijgen op dezelfde manier. Dit blijf je doen tot je een rewardcode (of foutmelding) krijgt. Deze kan je herkennen aan de `text/plain` handling.
-
-### Reward
-Alle pizza's zijn nu 50 cent goedkoper voor jullie team! (voor de rest van de avond)
-
-## Challenge 4
-Om sneller pizza informatie te kunnen geven, zal Harold sommige requests zippen met gzip, zorg er dus voor dat je bot daar mee kan omgaan.
-
-### Opdracht
-Stuur een simpele PIZZA request naar `pizza!?!be:ugent:zeus:pi/fastlane`, je zal dan een response terug krijgen waarbij de header `Transfer-Encoding` soms op `gzip` staat, maar zeker niet altijd, pas als `Transfer-Encoding` effectief op `gzip` staat, zal er een code inzitten (1 kans op 50).
-Opletten, in het `HTTPizza-protocol` wordt `Handling` in de plaats gebruikt.
-
-### Rewards:
-Je krijgt een kwart pizza per persoon naar keuze gratis! (eenmalig)
+Please eat your entire pizza before continueing.
