@@ -36,7 +36,7 @@ For example, if you got this menu:
 ```
 you could check if a really weird pizza with nutella and parmesan exists by putting `topping/parmesan, sauce/nutella` in the `I-Want` header.
 
-Try to bruteforce all possible pizzas to see what pizzas exist. The order of toppings/sauces doesn't matter, nor does how many times you include the same topping/sauce.
+Try to bruteforce all possible pizzas to see what pizzas exist. The order of toppings/sauces doesn't matter, nor does how many times you include the same topping/sauce. You need to find the combination of  toppings that return a status code 200.
 
 Reward: every teammember gets one **free** slice of pizza
 
