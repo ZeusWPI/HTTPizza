@@ -20,7 +20,7 @@ Of course, there are no [double slashes](https://bits.blogs.nytimes.com/2009/10/
 
 ### Example
 The HTTP URL `http://www.ugent.be/foo/bar?q=7`
-could be represented in HTTPizza as `pizza!?!be:ugent:www/foo/bar?q=`.
+could be represented in HTTPizza as `pizza!?!be:ugent:www/foo/bar?q=7`.
 
 ## Protocol name
 ```
