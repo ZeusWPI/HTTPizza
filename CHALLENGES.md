@@ -27,7 +27,7 @@ In this special pizza place, the menu is different from usual menus: instead of 
 Of course, it's not possible to just throw some ingredients together and get a good pizza: only the chef knows what ingredients form a valid pizza.
 Unfortunately, you can't talk directly to the chef, but you can talk to the chef via your waiter.
 
-To check if a pizza exists, make a ORDER request to `/pizza` containing the `I-Want` header. The value of this header is a comma-separated list of toppings and sauces.
+To check if a pizza exists, make a PIZZA request to `/pizza` containing the `I-Want` header. The value of this header is a comma-separated list of toppings and sauces.
 
 For example, if you got this menu:
 
@@ -44,7 +44,7 @@ Reward: every teammember gets one **free** slice of pizza
 
 Each table has an oven in which you can bake a single pizza. After finding which pizza you want to order in #3, you can now order the pizza you got by making an ORDER request to `/order`. This request needs to have the `Pizza-Type` header set to the name of the pizza you got in #3. The response will have an `Oven-Time` header containing a number. This number indicates the number of seconds the pizza needs to be baked in the oven.
 
-After that time has passed, make a PIZZA request to `/pickup`. This will return your pizza ID.
+After that time has passed, make a ORDER request to `/pickup`. This will return your pizza ID.
 
 Reward:  every teammember gets one **free** slice of pizza
 
