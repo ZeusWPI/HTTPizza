@@ -3,17 +3,23 @@
 Welcome to Hot Tasty Tomato Palace, I'll be your server tonight, could you please pick a table?
 Unfortunately, I don't speak English, and I'm only able to speak [HTTPizza](https://github.com/ZeusWPI/HTTPizza).
 
-## 0. Greeting the waiter back
+## 0. Greeting the waiter
 
 Please be a polite human and make a PIZZA request to `/welcome`.
 
+Reward: warm fuzzy feeling
+
 ## 1. Picking a table
 
-To get a table, you'll need to login first. To do that, you need to make an ORDER request to `/login` with a `Name` header containing your name. The waiter will then give you a table number where you can sit down. This number will be in the `table` header in the response. In all further HTTPizza request, you'll need to add your tablenumber so the server doesn't get confused.
+To get a table, you'll need to login first. To do that, you need to make an ORDER request to `/login` with a `Name` header containing your teamname. The waiter will then give you a table number where you can sit down. This number will be in the `table` header in the response. In all further HTTPizza request, you'll need to add your tablenumber so the server doesn't get confused.
+
+Reward: you can choose one sticker from the stickertable
 
 ## 2. What's on the menu?
 
 You've just sat down on your assigned table, and want to check what pizza's are on the menu. To check the menu, make a PIZZA request to `/menu`. Don't forget to add a `Table` header with your table number you got from logging in!
+
+Reward: you can now order drinks at reduced prices
 
 ## 3. Picky eater
 
@@ -32,14 +38,27 @@ you could check if a really weird pizza with nutella and parmesan exists by putt
 
 Try to bruteforce all possible pizzas to see what pizzas exist. The order of toppings/sauces doesn't matter, nor does how many times you include the same topping/sauce.
 
+Reward: every teammember gets one **free** slice of pizza
+
 ## 4. Time to order!
 
 Each table has an oven in which you can bake a single pizza. After finding which pizza you want to order in #3, you can now order the pizza you got by making an ORDER request to `/order`. This request needs to have the `Pizza-Type` header set to the name of the pizza you got in #3. The response will have an `Oven-Time` header containing a number. This number indicates the number of seconds the pizza needs to be baked in the oven.
 
 After that time has passed, make a PIZZA request to `/pickup`. This will return your pizza ID.
 
+Reward: every teammember gets two **free** pizza slices!
+
 ## 5. Om nom nom
 
 My favorite part! We can now eat the pizza we just got from the oven by making an EAT request to `/pizza/<your-pizza-id-here>/`. This will redirect you to a pizza slice, which you then have to EAT. Every request to your pizza will return a new slice, until there's no more pizza left.
 
-Please eat your entire pizza before continueing.
+Please eat your entire pizza before continuing.
+
+Reward: every successful EAT request for a slice can be redeemed for an actual slice of pizza!
+
+
+# Extra challenges
+
+## I. Start your own pizza place
+
+Now write a HTTPizza/2.0 server from scratch that can handle HTTPizza requests.
